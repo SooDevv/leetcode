@@ -15,7 +15,6 @@ class Solution:
 
 def in_cache(func):
     cache = {}
-
     def _wrapper(n):
         if n in cache:
             return cache[n]
