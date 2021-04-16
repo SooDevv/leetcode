@@ -15,4 +15,4 @@ if __name__ == '__main__':
     jewels = "aA"
     stones = "aAAbbbb"
     result = Solution().numJewelsInStones(jewels, stones)
-    print(result)
+    assert result == 3
