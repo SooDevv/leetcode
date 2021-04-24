@@ -8,6 +8,12 @@ class Solution:
         result = [i[0] for i in str_2_idx_tuple]
         return ''.join(result)
 
+    def otherSolution(self,  s: str, indices: List[int]) -> str:
+        result = [''] * len(s)
+        for idx, elm in enumerate(zip(indices, s)):
+            result[elm[0]] = elm[1]
+        return ''.join(result)
+    
 
 if __name__ == '__main__':
     s = "codeleet"
