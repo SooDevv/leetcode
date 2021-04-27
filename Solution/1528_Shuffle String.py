@@ -13,7 +13,7 @@ class Solution:
         for idx, elm in enumerate(zip(indices, s)):
             result[elm[0]] = elm[1]
         return ''.join(result)
-    
+
 
 if __name__ == '__main__':
     s = "codeleet"
