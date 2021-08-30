@@ -7,17 +7,19 @@ class ListNode:
 
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+        head = node = ListNode(0)
         carry = 0
-        root = n = ListNode(0)
+
         while l1 or l2 or carry:
-            v1 = v2 = 0
+            sum_val = 0
             if l1:
-                v1 = l1.val
+                sum_val += l1.val
                 l1 = l1.next
             if l2:
-                v2 = l2.val
+                sum_val += l2.val
                 l2 = l2.next
-            carry, rem = divmod(v1 + v2 + carry, 10)
-            n.next = ListNode(rem)
-            n = n.next
-        return root.next
+
+            carry, val = divmod(sum_val + carry, 10)
+            node.next = ListNode(val)
+            node = node.next
+        return head.next
